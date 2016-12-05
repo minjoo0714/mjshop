@@ -12,7 +12,7 @@ public class DBConn {
 	{
 		if(dbConn==null)
 		{
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@localhost:1521:fta";
 			String user = "minjoo";
 			String pwd = "0714";
 			Class.forName("oracle.jdbc.driver.OracleDriver");

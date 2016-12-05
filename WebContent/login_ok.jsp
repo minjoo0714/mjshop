@@ -11,12 +11,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<script>alert('로그인 되었습니다');</script>
 <%
- 	response.sendRedirect("mainframe.jsp");
-
+ 	response.sendRedirect("main.jsp");
 	%>
-
-	
-	<script>alert('로그인 되었습니다');</script>	
 </body>
 </html>

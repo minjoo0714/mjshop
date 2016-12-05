@@ -12,15 +12,14 @@
 <%
 	Connection conn = DBConn.getConnection();
 	MemberDAO dao = new MemberDAO(conn);
-	
-	
+		
 	String id = request.getParameter("id");
 	String pwd = request.getParameter("pwd");
-	String flag1 = dao.selectPwd(id,pwd);
-	int flag = Integer.parseInt(flag1);
+	int flag = dao.selectPwd(id,pwd);
+	
  	if(flag == 0) { //틀린 경우
  		 %> <script> alert("로그인 실패"); history.go(-1); </script> <%
 	} else if(flag == 1) { //맞은 경우
- 	response.sendRedirect("login_ok.jsp");
+ 		response.sendRedirect("login_ok.jsp");
 	}
 %>

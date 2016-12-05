@@ -81,36 +81,36 @@
 </head>
 <body>
 <center>
-	<table cellpadding="30px" style="font-family: GillSans; font-size: 14px; font-weight: 400;">
-		<tr>
-			<td align="center">
-				<strong style="font-size: 28px;">SIGN IN</strong>
-				<br><br>
-한국어 상담 고객센터: 01028571088 Email customer care | Packaging options | Shipping information | Return policy
-			</td>
-		</tr>
-		<tr>
-			<td style="    background-color: #ececec;    width: 920px;    padding: 15px;">
-    		<strong style="font-size: 20px;">REGISTERED CUSTOMERS</strong><br>
-If you have already registered with Joo_Attic, then sign in here. 
-Please note: if you have only subscribed to the weekly newsletter, you are not a registered user and need to register below.
-			<br>
-<p><label style="width: 200px;     float: left;" for="name">Enter your ID</label><input style="margin: 0; width: 250px;" type="text" name="id"></p>
-<p><label style="width: 200px;     float: left;" for="pwd">Enter your password</label><input style="margin: 0; width: 250px;" type="password" name="pwd">
-<button style="background-color: #000;
-    color: #fff;
-    font-size: 12px;
-    font-weight: normal;
-    padding: 8px 13px;
-    border: 1px solid black;
-	float: right;
-    border-radius: 3;" onclick="submit" action="login.jsp">Sign in Now</button>
-</p>			
-
-			</td>
-		</tr>
-		
-	</table>
+	<form action="login.jsp" method="post" >
+		<table cellpadding="30px" style="font-family: GillSans; font-size: 14px; font-weight: 400;">
+			<tr>
+				<td align="center">
+					<strong style="font-size: 28px;">SIGN IN</strong>
+					<br><br>
+					한국어 상담 고객센터: 01028571088 Email customer care | Packaging options | Shipping information | Return policy
+				</td>
+			</tr>
+			<tr>
+				<td style="    background-color: #ececec;    width: 920px;    padding: 15px;">
+	    		<strong style="font-size: 20px;">REGISTERED CUSTOMERS</strong><br>
+					If you have already registered with Joo_Attic, then sign in here. 
+					Please note: if you have only subscribed to the weekly newsletter, you are not a registered user and need to register below.
+				<br>
+				<p><label style="width: 200px;     float: left;" for="name">Enter your ID</label><input style="margin: 0; width: 250px;" type="text" name="id"></p>
+				<p><label style="width: 200px;     float: left;" for="pwd">Enter your password</label><input style="margin: 0; width: 250px;" type="password" name="pwd">
+				<input type="submit" value ="Sign in Now" style="background-color: #000;
+				    color: #fff;
+				    font-size: 12px;
+				    font-weight: normal;
+				    padding: 8px 13px;
+				    border: 1px solid black;
+					float: right;
+				    border-radius: 3;" >
+				</p>			
+				</td>
+			</tr>
+		</table>
+	</form>	
 </center>
 </body>
 </html>

@@ -13,7 +13,7 @@
 	Connection conn = DBConn.getConnection();
 	MemberDAO dao = new MemberDAO(conn);
 	
-	String selectPwd = dao.selectPwd(id);
+	String selectPwd = dao.selectPwd(id,pwd);
 	
 	if(pwd==selectPwd)
 	{

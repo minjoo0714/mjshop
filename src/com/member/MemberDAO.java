@@ -22,7 +22,6 @@ public class MemberDAO {
 		
 		try {
 			sql = "INSERT INTO MJ_MEMBER(MEMBER_NUM, ID, NAME, PWD) VALUES(MEMBER_SEQ.NEXTVAL, ?, ?, ?)";
-			
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getName());
@@ -35,26 +34,23 @@ public class MemberDAO {
 		return result;
 	}
 	
-	public String selectPwd(String id,String pwd){
-
-		
+	public int selectPwd(String id,String pwd){
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String sql;
-		String flag="";
+		int flag=0;
 		try {
-			sql = "SELECT * FROM MJ_MEMBER WHERE ID=? AND PWD = ?";
+			sql = "SELECT COUNT(*) AS COUNT FROM MJ_MEMBER WHERE ID=? AND PWD = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, pwd);
 			rs = pstmt.executeQuery();
-			System.out.println(rs.getString("PWD"));
-			
+			while(rs.next()){
+				flag=rs.getInt("COUNT");
+			}
 		} catch (Exception e) {
 			System.out.println(e.toString());
-			
 		}
-		
 		return flag;
 	}
 	

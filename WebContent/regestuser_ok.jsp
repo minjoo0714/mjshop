@@ -15,6 +15,6 @@
 	dao.insertUser(dto);
 	
 	DBConn.close();
-	response.sendRedirect("main1.jsp");
+	response.sendRedirect("main.jsp");
 	
 %>
